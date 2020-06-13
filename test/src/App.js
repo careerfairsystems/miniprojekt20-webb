@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Home, Login, SignUp, Profile, Company, Error404} from "./index.js";
+import { Home, Login, SignUp, Profile, Companies, Error404} from "./index.js";
 
 function App() {
   return (
@@ -11,19 +11,19 @@ function App() {
         <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/Error404">
+          <Route path="/error-404">
             <Error404 />
           </Route>
-          <Route path="/SignUp">
+          <Route path="/sign-up">
             <SignUp />
           </Route>
-          <Route path="/Login">
+          <Route path="/login">
             <Login />
           </Route>
-          <Route path="/Company">
-            <Company />
+          <Route path="/companies">
+            <Companies />
           </Route>
-          <Route path="/Profile">
+          <Route path="/profile">
             <Profile />
           </Route>
           <Route path="/">

@@ -17,20 +17,20 @@ function MenuList() {
         <Divider />
         <List>
             <div>
-              <ListItem button key={"Login"} component={Link} to="/Login">
+              <ListItem button key={"Login"} component={Link} to="/login">
                 <ListItemText primary={"Login"} />
               </ListItem>
 
-              <ListItem button key={"Sign Up"} component={Link} to="/SignUp">
+              <ListItem button key={"Sign Up"} component={Link} to="/sign-up">
                 <ListItemText primary={"Sign Up"} />
               </ListItem>
 
-              <ListItem button key={"Profile"} component={Link} to="/Profile">
+              <ListItem button key={"Profile"} component={Link} to="/profile">
                 <ListItemText primary={"Profile"} />
               </ListItem>
 
-              <ListItem button key={"Company"} component={Link} to="/Company">
-                <ListItemText primary={"Company"} />
+              <ListItem button key={"Companies"} component={Link} to="/companies">
+                <ListItemText primary={"Companies"} />
               </ListItem>
             </div>
         </List>

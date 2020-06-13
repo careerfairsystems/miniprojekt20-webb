@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Profile from "./pages/Profile";
-import Company from "./pages/Company";
+import Companies from "./pages/Companies";
 import Error404 from "./pages/Error404";
 
 ReactDOM.render(
@@ -22,7 +22,7 @@ export{
   Login,
   SignUp,
   Profile,
-  Company,
+  Companies,
   Error404,
 }
 // If you want your app to work offline and load faster, you can change

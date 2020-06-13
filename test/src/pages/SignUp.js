@@ -1,9 +1,14 @@
 import React from 'react';
+import MenuList from '../components/MenuList';
+import EmailInputCard from '../components/EmailInputCard';
+import Logo from '../components/Logo';
 
 function SignUp() {
 return (
     <div>
-      <h2>Sign Up</h2>
+      <Logo></Logo>
+      <MenuList></MenuList>
+      <EmailInputCard></EmailInputCard>
     </div>
   );
 }
