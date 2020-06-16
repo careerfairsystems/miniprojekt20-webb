@@ -1,12 +1,11 @@
 import React from 'react';
-import Logo from '../components/Logo';
-import MenuList from '../components/MenuList';
+import Logo from '../components/Logo.js';
 
 function Home() {
-return (
+  return (
     <div>
-      <Logo></Logo>
-      <MenuList></MenuList>
+      <h1>Home</h1>
+      <Logo />
     </div>
   );
 }

@@ -1,13 +1,10 @@
 import React from 'react';
-import MenuList from '../components/MenuList';
-import Logo from '../components/Logo';
 import LoginBox from '../components/LoginBox';
 
 function Login() {
-return (
+  return (
     <div>
-      <MenuList></MenuList>
-      <Logo></Logo>
+      <h1>Login</h1>
       <LoginBox></LoginBox>
     </div>
   );

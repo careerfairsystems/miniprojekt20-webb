@@ -1,13 +1,10 @@
 import React from 'react';
-import MenuList from '../components/MenuList';
 import EmailInputCard from '../components/EmailInputCard';
-import Logo from '../components/Logo';
 
 function SignUp() {
-return (
+  return (
     <div>
-      <Logo></Logo>
-      <MenuList></MenuList>
+      <h1>Sign Up</h1>
       <EmailInputCard></EmailInputCard>
     </div>
   );
