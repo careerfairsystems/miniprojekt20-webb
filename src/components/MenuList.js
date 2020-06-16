@@ -1,41 +1,60 @@
 import React from 'react';
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import { Link} from "react-router-dom";
+import { Drawer, List, ListItem, ListItemText } from '@material-ui/core';
+import { Link } from "react-router-dom";
 
+const not = f => () => !f();
+const always = () => true;
+
+function signedIn() {
+  // TODO: return true when signed in.
+}
 
 function MenuList() {
+
+  const menuLinks = [
+    {
+      text: 'Home',
+      path: '/',
+      when: always,
+    },
+    {
+      text: 'Login',
+      path: '/login',
+      when: always, // For debugging purposes. FIXME: use correct filter.
+      // when: not(signedIn),
+    },
+    {
+      text: 'Sign Up',
+      path: '/sign-up',
+      when: always, // For debugging purposes. FIXME: use correct filter.
+      // when: not(signedIn),
+    },
+    {
+      text: 'Profile',
+      path: '/profile',
+      when: always, // For debugging purposes. FIXME: use correct filter.
+      // when: signedIn,
+    },
+    {
+      text: 'Companies',
+      path: '/companies',
+      when: always, // For debugging purposes. FIXME: use correct filter.
+      // when: signedIn,
+    },
+  ].filter(({ when }) => when());
+
+  // TODO: Add logout link or functionality.
+
   return (
-    <div className="MenuList">
-      <Drawer
-        variant='permanent'
-        anchor='left'
-      >
-        <Divider />
-        <List>
-            <div>
-              <ListItem button key={"Login"} component={Link} to="/login">
-                <ListItemText primary={"Login"} />
-              </ListItem>
-
-              <ListItem button key={"Sign Up"} component={Link} to="/sign-up">
-                <ListItemText primary={"Sign Up"} />
-              </ListItem>
-
-              <ListItem button key={"Profile"} component={Link} to="/profile">
-                <ListItemText primary={"Profile"} />
-              </ListItem>
-
-              <ListItem button key={"Companies"} component={Link} to="/companies">
-                <ListItemText primary={"Companies"} />
-              </ListItem>
-            </div>
-        </List>
-      </Drawer>
-    </div>
+    <Drawer variant='permanent' anchor='left'>
+      <List>
+        {menuLinks.map(({ text, path }) => (
+          <ListItem button key={text} component={Link} to={path} >
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+    </Drawer>
   );
 }
 
