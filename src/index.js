@@ -17,7 +17,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-export{
+export {
   Home,
   Login,
   SignUp,
